@@ -13,6 +13,10 @@ class bcolors:
     INFO = '\033[96m'
     YELLOW = '\033[93m'
 
+INCREASE_HEALTH = "health + 1"
+DECREASE_HEALTH = "health - 1 "
+
+
 print(bcolors.INFO+"Loading JSON file in..."+bcolors.RESET)
 
 print(bcolors.INFO + "Loading in the game data..."+bcolors.RESET)
@@ -34,6 +38,17 @@ def setPath(numb):
         if val["id"]==numb:
             global currentPath
             currentPath = val
+            if "effect" in currentPath:
+                print(currentPath["effect"]["status"])
+                print(currentPath["effect"]["consequence"])
+                out=currentPath["effect"]["consequence"]
+                global playerHealth
+                if out==INCREASE_HEALTH:
+                    playerHealth+=1
+                elif out==DECREASE_HEALTH:
+                    playerHealth-=1
+                else:
+                    print("Unknown Conseq")
 
 # Start of the program below
 # vvvvvvvvvvvvvvvvvvvvvvvvvv
