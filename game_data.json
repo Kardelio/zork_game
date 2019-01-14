@@ -1,0 +1,54 @@
+{
+	"game":{
+		"start":0
+	},
+	"player":{
+		"health":10,
+		"gold":10
+	},
+	"paths":[
+		{
+			"id":0,
+			"text":"Here is some text",
+			"options":[
+				{
+					"choice":"Here is a choice",
+					"goto":1
+				},
+				{
+					"choice":"This one is differnt",
+					"goto":2
+				}
+			]
+		},
+		{
+			"id":1,
+			"text":"now this is num 1",
+			"options":[
+				{
+					"choice":"go to 0",
+					"goto":0
+				},
+				{
+					"choice":"go to 2",
+					"goto":2
+				}
+			]
+		},
+		{
+			"id":2,
+			"text":"now this is num 2",
+			"options":[
+				{
+					"choice":"go now to zero",
+					"goto":0
+				},
+				{
+					"choice":"back to 1",
+					"goto":1
+				}
+			]
+		}
+
+	]
+}
