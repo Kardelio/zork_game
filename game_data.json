@@ -9,50 +9,64 @@
 	"paths":[
 		{
 			"id":0,
-			"text":"Here is some text",
+			"text":"You find yourself in a dark dark wood, with 2 directions to go, left or right...",
 			"options":[
 				{
-					"choice":"Here is a choice",
+					"choice":"Left",
 					"goto":1
 				},
 				{
-					"choice":"This one is differnt",
+					"choice":"Right",
 					"goto":2
 				}
 			]
 		},
 		{
 			"id":1,
-			"text":"now this is num 1",
+			"text":"After finding the health potion you follow the road infront of you, there is a strange figure standing a few metres ahead of you alone, what do you do?",
 			"effect": {
 				"status":"good",
+				"text": "You find a potion and heal up!",
 				"consequence": "health + 1"
 			},
 			"options":[
 				{
-					"choice":"go to 0",
-					"goto":0
+					"choice":"You approach the figure and say Hello",
+					"goto":3
 				},
 				{
-					"choice":"go to 2",
+					"choice":"You go around the figure avoiding it completely",
 					"goto":2
 				}
 			]
 		},
 		{
 			"id":2,
-			"text":"now this is num 2",
+			"text":"You continue walking for some time and nothing seems to happen to you, its a shame the programmer didnt code that many scenarios!",
 			"options":[
 				{
-					"choice":"go now to zero",
+					"choice":"Go Home",
 					"goto":0
 				},
 				{
-					"choice":"back to 1",
-					"goto":1
+					"choice":"Go Home",
+					"goto":0
+				}
+			]
+		},
+		{
+			"id":3,
+			"text":"The figure runs away from you! What do you do?",
+			"options":[
+				{
+					"choice":"Chase after it...",
+					"goto":0
+				},
+				{
+					"choice":"Leave it alone and carry on walking...",
+					"goto":2
 				}
 			]
 		}
-
 	]
 }
